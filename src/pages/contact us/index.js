@@ -1,7 +1,7 @@
 import React from "react";
 import { Layout } from "../../components/Layout";
 
-const Contactus = () => {
+const ContactUs = () => {
   return (
     <Layout titleHeader={"Contact Us"}>
       <div
@@ -26,4 +26,4 @@ const Contactus = () => {
   );
 };
 
-export default Contactus;
+export default ContactUs;
