@@ -1,5 +1,6 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { routes } from "../../routes";
 
 const Side = () => {
   return (
@@ -9,12 +10,12 @@ const Side = () => {
       }
     >
       <div className="flex self-end gap-10 items-end h25 w12 my-4 ">
-        <a href="src/pages/Login/index.js">
+        <Link to={routes.login}>
           <button className={"rounded bg-yellow-600 p-5"}>Login</button>
-        </a>
-        <a href="src/pages/Register/index.js">
+        </Link>
+        <Link to={routes.register}>
           <button className={"rounded bg-yellow-500 p-5"}>Register</button>
-        </a>
+        </Link>
       </div>
     </div>
   );

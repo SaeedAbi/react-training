@@ -8,15 +8,17 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Error from "./pages/Error";
 import ContactUs from "./pages/contact us";
+import { routes } from "./routes";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/contact" element={<ContactUs />} />
+        <Route path={routes.home} element={<Home />} />
+        <Route path={routes.login} element={<Login />} />
+        <Route path={routes.register} element={<Register />} />
+        <Route path={routes.contact} element={<ContactUs />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
