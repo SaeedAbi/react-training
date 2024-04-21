@@ -3,7 +3,7 @@ import { Layout } from "../../components/Layout";
 
 const Home = () => {
   return (
-    <Layout titleHeader={"Home"}>
+    <Layout titleHeader={"Home"} theme={"home"}>
       <div className="container flex flex-grow flex-shrink gap-10">
         <div className="hover:animate-spin  ">
           <span className={"bg-red-200 pb-12 pr12 "}>animation</span>

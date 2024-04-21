@@ -1,13 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { routes } from "../../routes";
+import classNames from "classnames";
 
-const Side = () => {
+const themes = {
+  home: "bg-blue-300",
+  register: "bg-red-300",
+  login: "bg-green-300",
+  fallback: "bg-fuchsia-300",
+};
+
+const Side = ({ theme = "fallback" }) => {
   return (
     <div
-      className={
-        "flex justify-center items-center w-[240px] bg-blue-300 h-full"
-      }
+      className={classNames(
+        "flex justify-center items-center w-[240px] h-full",
+        themes[theme],
+      )}
     >
       <div className="flex self-end gap-10 items-end h25 w12 my-4 ">
         <Link to={routes.login}>

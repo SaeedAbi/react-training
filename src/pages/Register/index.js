@@ -3,7 +3,7 @@ import { Layout } from "../../components/Layout";
 
 const Register = () => {
   return (
-    <Layout titleHeader={"Register"}>
+    <Layout titleHeader={"Register"} theme={"register"}>
       <div className="container bg-violet-50 border-4">
         <h3 className="text-center text-xl py-12">
           Get huge <strong className={"uppercase "}>deals</strong> for first

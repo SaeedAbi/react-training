@@ -3,7 +3,7 @@ import { Layout } from "../../components/Layout";
 
 const Login = () => {
   return (
-    <Layout titleHeader={"Login"}>
+    <Layout titleHeader={"Login"} theme={"login"}>
       <div className="container bg-violet-50 border-4">
         <h3 className="text-center text-xl py-12 font-semibold">Log in here</h3>
         <div className="grid grid-cols-[1fr,1fr,3fr] gap-x-20 gap-y-12 py-28 px-20 ">
