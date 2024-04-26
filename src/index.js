@@ -60,7 +60,7 @@ function App() {
 const Header = () => {
   return (
     <div>
-      <h1 className={"header"}>Fast React Pizza Co.</h1>
+      <h1 className="header">Fast React Pizza Co.</h1>
     </div>
   );
 };
@@ -68,11 +68,27 @@ const Header = () => {
 const Menu = () => {
   return (
     <main>
-      <h2 className={"menu"}>Our menu</h2>
-      <Pizza />
-      <Pizza />
-      <Pizza />
-      <Pizza />
+      <h2 className="menu header">Our menu</h2>
+
+      <ul className="pizzas">
+        {pizzaData.map((pizza) => (
+          <Pizza pizzaObj={pizza} key={pizza.name} />
+        ))}
+      </ul>
+
+      {/*<Pizza*/}
+      {/*  name="Pizza Spinac"*/}
+      {/*  ingredient="Tomato, mozarella, spinach, and ricotta cheese"*/}
+      {/*  photoName="pizzas/spinaci.jpg "*/}
+      {/*  price={10}*/}
+      {/*/>*/}
+
+      {/*<Pizza*/}
+      {/*  name="Pizza Funghi"*/}
+      {/*  ingredient="Tomato, mozarella, mushrooms, and onion"*/}
+      {/*  photoName="pizzas/funghi.jpg "*/}
+      {/*  price={12}*/}
+      {/*/>*/}
     </main>
   );
 };
@@ -93,13 +109,17 @@ const Footer = () => {
   );
 };
 
-function Pizza() {
+function Pizza(props) {
+  // console.log(props);
   return (
-    <div>
-      <img src="pizzas/spinaci.jpg" alt="Pizza spinaci" />
-      <h3>Pizza Spinaci</h3>
-      <p>Tomato, mozarella, spinach, and ricotta cheese</p>
-    </div>
+    <li className="pizza ">
+      <img src={props.pizzaObj.photoName} alt={props.pizzaObj.name} />
+      <div>
+        <h3>{props.pizzaObj.name}</h3>
+        <p>{props.pizzaObj.ingredient}</p>
+        <span>{props.pizzaObj.price}</span>
+      </div>
+    </li>
   );
 }
 
