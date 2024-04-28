@@ -37,7 +37,7 @@ body {
   align-self: stretch;
 }
 
-.header h1 {
+h1.header {
   /* Non-accessible color */
   color: #edc84b;
   /* color: #af8602; */
